@@ -31,15 +31,8 @@
 <script>
 'use strict';
 
-const answer = window.prompt('ヘルプを見ますか？');
-if (answer === 'yes') 
-{
-    window.alert('ウィンドウズアラート');
-} else if (answer === 'no'){
-    window.alert('ゲーム起動');
-} else {
-    window.alert('yesかnoでお答えください');
-}
+const number = Math.floor(Math.random() * 6);
+const answer = parseInt(window.prompt('数当てゲーム 0~5の数字を入力してください'));
 
 </script>
 </body>
