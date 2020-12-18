@@ -19,7 +19,7 @@
 <main>
 <div class="container">
 <section>
-    <p>ブラウザのコンソールを開きます。</p>
+    <p id ="output"></p>
 </section>
 </div><!-- /.container -->
 </main>
@@ -37,6 +37,8 @@ function total(price) {
 }
 
 console.log('コーヒーメーカーの値段は' + total(8000) +'円（税込です）')
+
+document.getElementById('output').textContent ='コーヒーメーカーの値段は' + total(8000) +'円（税込）です。';
 </script>
 </body>
 </html>
