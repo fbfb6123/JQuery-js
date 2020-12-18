@@ -31,14 +31,20 @@
 <script>
 'use strict';
 
-function total(price) {
-    const tax = 0.1;
-    return price + price * tax;
+function fizzbuzz(num) 
+{
+    if(num % 3 === 0 && num % 5 === 0) {
+        return 'fizzbuzz';
+    } else if(num % 3 === 0) {
+        return 'fizz';
+    } else if(num % 5 === 0) {
+        return 'buzz';
+    } else {
+        return num;
+    }
 }
 
-console.log('コーヒーメーカーの値段は' + total(8000) +'円（税込です）')
-
-document.getElementById('output').textContent ='コーヒーメーカーの値段は' + total(8000) +'円（税込）です。';
+console.log(fizzbuzz(3));
 </script>
 </body>
 </html>
