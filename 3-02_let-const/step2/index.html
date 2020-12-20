@@ -10,15 +10,13 @@
 </head>
 <body>
 <header>
-<div class="container">
-<h1>入力内容に応じて動作を変更する</h1>
-<h2>定数を使ってデータを書き換えられないようにする</h2>
-</div><!-- /.container -->
+
 </header>
 <main>
 <div class="container">
 <section>
-    <p>ブラウザのコンソールを開きます。</p>
+    <h1>やることリスト</h1>
+<ul id="list"></ul>
 </section>
 </div><!-- /.container -->
 </main>
@@ -35,7 +33,7 @@ todo.push('歯医者に行く');
 
 for(let item of todo) {
     const li = `<li>${item}</li>`;
-    console.log(li);
+    document.getElementById('list').insertAdjacentHTML('beforeend', li);
 }
 
 console.log(todo[0]);
