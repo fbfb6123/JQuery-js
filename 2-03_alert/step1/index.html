@@ -52,11 +52,19 @@ goal.setSeconds(59);  //秒
 
 console.log(countdown(goal));
 
-const counter = countdown(goal); //countdownにパラメーターを渡す
 
+function recalc() {  
+const counter = countdown(goal); //countdownにパラメーターを渡す
 const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
 document.getElementById('timer').textContent = time;
+refresh();  //refresh関数呼び出し②
+}
 
+function refresh() {
+  setTimeout(recalc, 1000);  //1秒後にrecalc関数呼び出し③
+}
+
+recalc();  //recalc関数呼び出し①
 </script>
 </body>
 </html>
