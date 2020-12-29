@@ -47,18 +47,14 @@ function countdown(due) //goalから未来の時間のパラメーターを受�
   return count;
 }
 
-let goal = new Date(); //未来の時間のインスタンスを生成
-goal.setHours(23);    //時間
-goal.setMinutes(59);  //分
-goal.setSeconds(59);  //秒
-
-console.log(countdown(goal));
-
+const goal = new Date(2025, 4, 3);
 
 function recalc() {  
 const counter = countdown(goal); //countdownにパラメーターを渡す
-const time = `${counter[1]}時間${counter[2]}分${counter[3]}秒`;
-document.getElementById('timer').textContent = time;
+document.getElementById('day').textContent = counter[0];
+document.getElementById('hour').textContent = counter[1];
+document.getElementById('min').textContent = String(counter[2]).padStart(2,'0');
+document.getElementById('sec').textContent = String(counter[3]).padStart(2,'0');
 refresh();  //refresh関数呼び出し②
 }
 
